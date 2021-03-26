@@ -1,0 +1,29 @@
+@{
+  Layout = "_Layout";
+}
+
+@using SweetSavoryTreats.Models;
+@model IEnumerable<SweetSavoryTreats.Models.Flavor>
+
+<h1>All Flavors:</h1>
+
+@if (Model.Any())
+{
+  <ul>
+    @foreach (Flavor flavor in Model)
+    {
+      <li>@Html.ActionLink($"{flavor.Name}", "Details", new { id = flavor.FlavorId })</li>
+    }
+  </ul>
+} 
+else
+{
+  <h3>No Flavor(s) Available</h3>
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+  <p>@Html.ActionLink("Add new Flavor", "Create")</p>
+}
+
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
