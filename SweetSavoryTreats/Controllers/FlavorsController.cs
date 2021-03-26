@@ -50,9 +50,29 @@ namespace SweetSavoryTreats.Controllers
     {
       var thisFlavor = _db.Flavors
           .Include(flavor => flavor.JoinEntities)
-          .ThenInclude(join => join.Treats)
+          .ThenInclude(join => join.Treat)
           .FirstOrDefault(flavor => flavor.FlavorId == id);
       return View(thisFlavor);
+    }
+
+    [Authorize]
+    public ActionResult Edit(int id)
+    {
+      var thisFlavor = _db.Flavors.FirstOrDefault(flavor => flavor.FlavorId == id);
+      ViewBag.TreateId = new SelectList(_db.Treats, "TreatId", "Name");
+      return View(thisFlavor);
+    }
+
+    [HttpPost]
+    public ActionResult Edit(Flavor flavor, int treatId)
+    {
+      if (treatId != 0)
+      {
+        _db.FlavorTreats.Add(new FlavorTreat() { FlavorId = flavor.FlavorId, TreatId = treatId });
+      }
+      _db.Entry(flavor).State = EntityState.Modified;
+      _db.SaveChanges();
+      return RedirectToAction("Index");
     }
 
   }
