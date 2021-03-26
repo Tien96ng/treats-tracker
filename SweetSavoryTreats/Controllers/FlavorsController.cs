@@ -11,11 +11,11 @@ using System.Security.Claims;
 
 namespace SweetSavoryTreats.Controllers
 {
-  public class TreatsController : Controller
+  public class FlavorsController : Controller
   {
     private readonly SweetSavoryTreatsContext _db;
     private readonly UserManager<ApplicationUser> _userManager;
-    public TreatsController(UserManager<ApplicationUser> userManager, SweetSavoryTreatsContext db)
+    public FlavorsController(UserManager<ApplicationUser> userManager, SweetSavoryTreatsContext db)
     {
       _userManager = userManager;
       _db = db;
