@@ -2,7 +2,7 @@
   Layout = "_Layout";
 }
 
-@using Recipe.ViewModels
+@using SweetSavoryTreats.ViewModels
 
 @model RegisterViewModel
 
@@ -22,4 +22,5 @@
     <input type="submit" value="Register" class="btn btn-success" />
 }
 
+<p>@Html.ActionLink("Login", "Login")</p>
 <p>@Html.ActionLink("Back - Home", "Index", "Home")</p>
