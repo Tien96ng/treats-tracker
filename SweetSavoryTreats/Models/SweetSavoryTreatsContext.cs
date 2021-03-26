@@ -5,7 +5,7 @@ namespace SweetSavoryTreats.Models
 {
   public class SweetSavoryTreatsContext : IdentityDbContext<ApplicationUser>
   {
-    public virtual DbSet<Falvor> Flavors { get; set; }
+    public virtual DbSet<Flavor> Flavors { get; set; }
     public DbSet<Treat> Treats { get; set; }
     public DbSet<FlavorTreat> FlavorTreats { get; set; }
 
