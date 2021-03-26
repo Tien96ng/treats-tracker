@@ -19,10 +19,10 @@ namespace SweetSavoryTreats.Models
       _db = db;
     }
 
-    // public ActionResult Index()
-    // {
-    //   return View();
-    // }
+    public ActionResult Index()
+    {
+      return View();
+    }
 
     public IActionResult Register()
     {
