@@ -1,0 +1,29 @@
+@{
+  Layout = "_Layout";
+}
+
+@using SweetSavoryTreats.Models;
+@model IEnumerable<SweetSavoryTreats.Models.Treat>
+
+<h1>All Treats:</h1>
+
+@if (Model.Any())
+{
+  <ul>
+    @foreach (Treat treat in Model)
+    {
+      <li>@Html.ActionLink($"{treat.Name}", "Details", new { id = treat.TreatId })</li>
+    }
+  </ul>
+} 
+else
+{
+  <h3>No Treat(s) Available</h3>
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+  <p>@Html.ActionLink("Add new Treat", "Create")</p>
+}
+
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
