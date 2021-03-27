@@ -36,7 +36,7 @@ A MVC web application for "Pierre's Sweet and Savory Treats" that is used as a v
 1. In your terminal of choice or [GitHub's Desktop Application](https://desktop.github.com/) , clone the above repository from Github. For further explanation on how to clone this repository, please visit [GitHub's Documentation](https://docs.github.com/en/github/using-git/which-remote-url-should-i-use).
 2. Ensure you are running .NET Core SDK by using the command dotnet --version in your terminal. If a version number is not presented, please visit [this download page for .NET 5 and install the applicable software for your OS](https://dotnet.microsoft.com/download/dotnet/5.0). 
 3. Once you verify you are running a .NET 5, navigate in your terminal to Treat Tracker directory within the treats-tracker directory you just cloned. Once there, run "dotnet build" in your terminal to build application within directory. 
-4. In your terminal, while still in Recipe directory, run "dotnet restore."
+4. In your terminal, while still in treat tracker directory, run "dotnet restore."
 5. You will require a text or code editor to complete the following steps. [VS Code is recommended](https://code.visualstudio.com/)
 
 
@@ -54,7 +54,7 @@ A MVC web application for "Pierre's Sweet and Savory Treats" that is used as a v
 3. In your terminal, run "dotnet ef database update"
 ### _Installation: General Use_
 
-1. Back in your terminal in the Recipe production directory, type "dotnet run." The terminal will present local host routes for you to navigate to in your browser. An example would be "http://localhost:5000." Enter this into a web browser of choice to use this application. Keep the terminal running as it is being used to control the local server.
+1. Back in your terminal in the treat tracker production directory, type "dotnet run." The terminal will present local host routes for you to navigate to in your browser. An example would be "http://localhost:5000." Enter this into a web browser of choice to use this application. Keep the terminal running as it is being used to control the local server.
 2. When finished, exit the terminal or use the command "CTRL C"(Windows) or "CMD C"(Mac) to shut down the local server.
 
 </details>
