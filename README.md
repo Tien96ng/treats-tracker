@@ -21,7 +21,7 @@
 ---
 
 ## _Description_ 📃
-
+A MVC web application for "Pierre's Sweet and Savory Treats" that is used as a viewing platform for flavor and treat enthusiast. The platform stores both Flavors and Treats. It works as a Many-To-Many relationship in order to have multiple Treats having many flavors and vice versa. With the utilization of the Entity Framework, MySQL, and Identity, the app can store the create the database and tables via the Models and store them collectively. Currently without a user account, an anonymous viewer can only have READ access. When you sign up and log into your account, it allows full CRUD functionality.
 
 ---
 
@@ -35,7 +35,7 @@
 > Repository: 
 1. In your terminal of choice or [GitHub's Desktop Application](https://desktop.github.com/) , clone the above repository from Github. For further explanation on how to clone this repository, please visit [GitHub's Documentation](https://docs.github.com/en/github/using-git/which-remote-url-should-i-use).
 2. Ensure you are running .NET Core SDK by using the command dotnet --version in your terminal. If a version number is not presented, please visit [this download page for .NET 5 and install the applicable software for your OS](https://dotnet.microsoft.com/download/dotnet/5.0). 
-3. Once you verify you are running a .NET 5, navigate in your terminal to Recipe directory within the Recipe-box directory you just cloned. Once there, run "dotnet build" in your terminal to build application within directory. 
+3. Once you verify you are running a .NET 5, navigate in your terminal to Treat Tracker directory within the treats-tracker directory you just cloned. Once there, run "dotnet build" in your terminal to build application within directory. 
 4. In your terminal, while still in Recipe directory, run "dotnet restore."
 5. You will require a text or code editor to complete the following steps. [VS Code is recommended](https://code.visualstudio.com/)
 
@@ -43,11 +43,11 @@
 ### _Installation: Database Recreation_
 
 1. Ensure you are running MySQL Server 8 and MySQL WorkBench 8. If you are running windows, use the [Windows Installer ](https://dev.mysql.com/downloads/installer/) for MySQL and follow the instructions provided by the installer. For Macs, visit [MySQL Commuinity Downloads](https://dev.mysql.com/downloads/mysql/) and select macOS from the Operation Systems. This will be a manual installation. If you need additonal assistance on this, please visit Epicodus's [Learn How to Program Article](https://www.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-and-configuring-mysql).
-2. Once you verify you have SQL installed, create a file called "appsettings.json" in the root directory Recipe-box. Paste the following into this file.
+2. Once you verify you have SQL installed, create a file called "appsettings.json" in the root directory treat-tracker. Paste the following into this file.
 ```
 {
   "ConnectionStrings": {
-      "DefaultConnection": "Server=localhost;Port={PORT OF SERVER};database=recipe-box;uid=root;pwd={PASSWORD OF SERVER};"
+      "DefaultConnection": "Server=localhost;Port={PORT OF SERVER};database=treat-tracker;uid=root;pwd={PASSWORD OF SERVER};"
   }
 }
 ```
@@ -68,6 +68,8 @@
 
 ## _Future Updates_ 🛠
 * Additional UI
+* Have separate roles for admins and logged-in users. Only admins should be able to add, update and delete.
+* Add an order form that only logged-in users can access. A logged-in user should be able to create, read, update and delete their own order.
 
 ---
 
